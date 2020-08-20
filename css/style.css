@@ -17,6 +17,7 @@
 .logo {
     float: left;
     color: white;
+    font-size: 2.5rem;
 }
 
 .logo a {
@@ -24,7 +25,7 @@
     padding: 24px 0 29px;
 }
 
-.logo-span {
+.logo-span  {
     color: #f67831;
 }
 
@@ -100,16 +101,13 @@
 
 .hero-section {
     height: 880px;
-    padding-top: 335px;
+    padding-top: 200px;
 }
 
 .hero-text span {
-    font-size: 14px;
     color: #f67831;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
 }
+
 .hero-text h1 {
     font-size: 72px;
     color: #ffffff;
@@ -120,43 +118,6 @@
 .hero-text p {
     color: #ffffff;
     margin-bottom: 44px;
-}
-
-/*---------------------
-  About Section
------------------------*/
-.about-section {
-    margin: 50px;
-    }
-
-.about-pic {
-    position: relative;
-}
-
-.about-pic img {
-    width: 100%;
-}
-
-.about-text {
-    padding-top: 50px;
-    padding-left: 40px;
-    text-align: center
-    ;
-}
-
-.about-text h2 {
-    font-size: 40px;
-    color: #111111;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-.about-section.about-page .about-text {
-    padding-top: 8px;
-}
-.about-section.about-page .about-text h2 {
-    margin-bottom: 20px;
 }
 
 /*---------------------
@@ -332,6 +293,11 @@
 .about-bg {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/about-bc.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/about-bc.jpg");
+}
+
+.account-bg {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/account-bc.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/account-bc.jpg");
 }
 
 .breadcrumb-text {
@@ -580,4 +546,270 @@ section#counter-stats {
 .stats .fa {
   color: #f67831;
   font-size: 60px;
+}
+
+/*---------------------------
+  Classes Timetable Section
+----------------------------*/
+.classes-timetable {
+	margin: 50px;
+}
+
+.schedule-table table {
+	width: 100%;
+	text-align: center;
+	border: 1px solid #f67831;
+}
+.schedule-table table thead tr th {
+	font-size: 16px;
+	color: #000000;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 25px 0;
+	background: #f0f0f0;
+}
+
+.schedule-table table tbody tr {
+	border-top: 1px solid #e5e5e5;
+}
+.schedule-table table tbody tr td {
+	width: 146px;
+	background: #ffffff;
+	border-right: 1px solid #e5e5e5;
+	padding: 18px 0;
+	position: relative;
+	z-index: 1;
+}
+.schedule-table table tbody tr td.ts-item {
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.schedule-table table tbody tr td:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    background: #FDC830;
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+    background: linear-gradient(to right, #F37335, #FDC830);
+	content: "";
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.schedule-table table tbody tr td.hover-bg:hover h6 {
+	color: #ffffff;
+}
+.schedule-table table tbody tr td.hover-bg:hover span {
+	color: #ffffff;
+}
+.schedule-table table tbody tr td.hover-bg:hover .trainer-name {
+	color: #ffffff;
+}
+.schedule-table table tbody tr td.hover-bg:hover:after {
+	opacity: 1;
+}
+.schedule-table table tbody tr td.workout-time {
+	font-size: 16px;
+	color: #000000;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.schedule-table table tbody tr td h6 {
+	font-weight: 600;
+	color: #f67831;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.schedule-table table tbody tr td span {
+	font-size: 14px;
+	font-weight: 600;
+	color: #111111;
+}
+.schedule-table table tbody tr td .trainer-name {
+	font-size: 14px;
+	color: #6b6b6b;
+}
+
+/*---------------------------
+  Step  Section
+----------------------------*/
+.step-section {
+    margin: 30px;
+    margin-bottom: 40px;
+}
+
+.step-section h5 {
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+/*---------------------------
+  Client  Section
+----------------------------*/
+.client-section {
+    margin-bottom: 30px;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/about-bc.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/about-bc.jpg");
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*---------------------------
+  Pricing  Section
+----------------------------*/
+.price-section {
+    margin: 30px;
+}
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+.plan-box {
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 70%;
+    height: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #f67831;
+}
+
+.plan-box h3 {
+    text-align: center;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+
+.plan-price {
+    font-size: 200%;
+    margin-bottom: 10px;
+    color: #f67831;
+}
+
+.plan-price span {
+    font-size: 50%;
+    font-weight: 300;
+    color: #9a9a9a;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+.btn-fl {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    background-color: #f67831;
+    border: 1px solid #f67831;
+    color: #fff;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-gh {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 1px solid #f67831;
+    color: #f67831;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-fl:hover,
+.btn-gh:hover {
+    background-color: white;
+    color: #f67831;
+    border: none;
+    text-decoration: none;
+}
+
+/* table */
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+/*---------------------------
+  Account Section
+----------------------------*/
+.account-section {
+    margin: 30px;
 }
