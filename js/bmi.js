@@ -1,57 +1,43 @@
-'use strict';
-// Define variables for range sliders
-// Weight variables
-var weightSlider = document.getElementById("myWeight");
-var weightOutput = document.getElementById("inputWeight");
-// Height variables
-var heightSlider = document.getElementById("myHeight");
-var heightOutput = document.getElementById("inputHeight");
-// Display slider value
-weightOutput.innerHTML = weightSlider.value;
-heightOutput.innerHTML = heightSlider.value;
-// Update sliders in real time while dragging it
-weightSlider.oninput = function () {
-  weightOutput.innerHTML = this.value;
-}
-heightSlider.oninput = function () {
-  heightOutput.innerHTML = this.value;
-}
-// Change weight-slider value on weight-number input
-function showValWeight(newVal) {
-  weightSlider.value=newVal;
-};
-// Change height-slider value on height-number input
-function showValHeight(newVal) {
-  heightSlider.value=newVal;
-};
-// *** Change number input when dragging slider ***
-// Add 2 eventListeners for weight and input sliders
-weightSlider.addEventListener("input", updateValueWeight);
-heightSlider.addEventListener("input", updateValueHeight);
-function updateValueWeight(e) {
-  weightOutput.value = e.srcElement.value;
-}
-function updateValueHeight(e) {
-  heightOutput.value = e.srcElement.value;
-}
-// Calculate BMI
-function calculateBmi() {
-  var weight = document.bmiForm.realweight.value;
-  var height = (document.bmiForm.realheight.value)/100;
-  var realbmi = (weight)/Math.pow(height, 2);
-  var realbmiOutput = document.getElementById("yourbmi");
-  var messageOutput = document.getElementById("evaluationMessage");
-  var roundedBmi = realbmi.toFixed(1);
-  messageOutput.innerHTML = ""; // Clear message before calculating new BMI
-  realbmiOutput.innerHTML = " " + roundedBmi; // Print BMI
-  // Appropriate message for your BMI rating
-  if (roundedBmi > 26) {
-    messageOutput.innerHTML = "YOU'RE A FAT ASS!!!";
-  } else {
-    
-  }
-  // Console loggings
-  console.log('Teža: ' + weight + " kg");
-  console.log('Višina: ' + height + " m");
-  console.log('BMI: ' + realbmi);
-}
+$(function(){
+	var form = $("form");
+	
+	form.on("submit", function(e){
+		e.preventDefault();
+		var resultDiv = $(".result .title");
+		
+		function calcBMI(){
+			var weight = $("#weight").val();
+	    var height = $("#height").val();
+			var bmi = weight / (height * height);
+			return bmi.toFixed(2);
+			
+		}
+		
+		function bmiState(){
+			if(calcBMI() < 16.9 ){
+				return "Very underweight";
+			}
+			if(calcBMI() > 17 && calcBMI() < 18.4 ){
+				return "Under weight";
+			}
+			if(calcBMI() > 18.5 && calcBMI() < 24.9 ){
+				return "Normal weight";
+			}
+			if(calcBMI() > 25 && calcBMI() < 29.9 ){
+				return "Overweight";
+			}
+			if(calcBMI() > 30 && calcBMI() < 34.9 ){
+				return "Overweight class 1";
+			}
+			if(calcBMI() > 35 && calcBMI() < 40 ){
+				return "Overweight class 2";
+			}
+			if(calcBMI() > 40){
+				return "Overweight class 3";
+			}
+		}
+		
+		resultDiv.html("Your BMI is" + " " + calcBMI() + " " +  "and your weight status is" + " " + bmiState());
+	});
+});
+

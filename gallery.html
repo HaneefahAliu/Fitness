@@ -4,11 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fitness</title>
-        <!-- Google Font -->
         <link
             href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
             rel="stylesheet">
-
         <!-- Css Styles -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -41,13 +39,11 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="classes.html" class="primary-btn signup-btn">Sign Up Now!</a>
                 </div>
                 <div id="mobile-menu-wrap"></div>
             </div>
         </header>
 
-         <!-- Breadcrumb Section Begin -->
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg gallery-bg">
     <div class="container">
@@ -65,53 +61,61 @@
     </div>
 </section>
 
-     <!-- Gallery Section Begin -->
-     <div class="gallery-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1>Our Gallery</h1>
-                </div>
-                <div class="col-lg-6">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-                        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-                      </div>
-                </div>
+ <!-- Gallery Section Begin -->
+ <div class="gallery-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Our Gallery</h1>
             </div>
-            <div class="row gallery-filter">
-                <div id="London" class="tabcontent">
-                    <h3>London</h3>
-                    <p>London is the capital city of England.</p>
-                  </div>
-                  
-                  <div id="Paris" class="tabcontent">
-                    <h3>Paris</h3>
-                    <p>Paris is the capital of France.</p> 
-                  </div>
-                  
-                  <div id="Tokyo" class="tabcontent">
-                    <h3>Tokyo</h3>
-                    <p>Tokyo is the capital of Japan.</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-6 mix all other">
-                            <img src="img/gallery/gallery-5.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6 mix all other">
-                            <img src="img/gallery/gallery-6.jpg" alt="">
+            <div class="col-lg-6">
+                <ul class="gallery-controls">
+                    <li class="active" data-filter=".all">all gallery</li>
+                    <li data-filter=".fitness">fitness</li>
+                    <li data-filter=".coaching">coaching</li>
+                    <li data-filter=".event">event</li>
+                    <li data-filter=".other">other</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row gallery-filter">
+            <div class="col-lg-6 mix all fitness">
+                <img src="images/gallery/gallery-1.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6 mix all fitness coaching">
+                        <img src="images/gallery/gallery-2.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12 mix all coaching">
+                                <img src="images/gallery/gallery-3.jpg" alt="">
+                            </div>
+                            <div class="col-lg-12 mix all coaching">
+                                <img src="images/gallery/gallery-4.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mix all event">
-                    <img src="img/gallery/gallery-7.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6 mix all other">
+                        <img src="images/gallery/gallery-5.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 mix all other">
+                        <img src="images/gallery/gallery-6.jpg" alt="">
+                    </div>
                 </div>
+            </div>
+            <div class="col-lg-6 mix all event">
+                <img src="images/gallery/gallery-7.jpg" alt="">
             </div>
         </div>
     </div>
+</div>
+     
 
         <!-- Footer Section Begin -->
         <footer class="footer-section">
@@ -178,24 +182,9 @@
             </div>
         </footer>
 
-        <!-- Js Plugins -->
-        <script>
-            function openCity(evt, cityName) {
-              var i, tabcontent, tablinks;
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-              tablinks = document.getElementsByClassName("tablinks");
-              for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-              }
-              document.getElementById(cityName).style.display = "block";
-              evt.currentTarget.className += " active";
-            }
-            </script>
 
-        <script src="js/jquery-3.3.1.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/mixitup.min.js"></script>

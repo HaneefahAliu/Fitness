@@ -4,11 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fitness</title>
-        <!-- Google Font -->
         <link
             href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
             rel="stylesheet">
-
         <!-- Css Styles -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -160,27 +158,33 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <i class="fa fa-check"></i> Free Hand
+                                        <i class="fa fa-check"></i>
+                                        Free Hand
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Gym Fitness
+                                        <i class="fa fa-check"></i>
+                                        Gym Fitness
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Running
+                                        <i class="fa fa-check"></i>
+                                        Running
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Yoga
+                                        <i class="fa fa-check"></i>
+                                        Yoga
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Body Building
+                                        <i class="fa fa-check"></i>
+                                        Body Building
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Exercise
+                                        <i class="fa fa-check"></i>
+                                        Exercise
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <a href="#" class="btn-fl">Sign up now</a>
+                                <a href="signup.html" class="btn-fl">Sign up now</a>
                             </div>
                         </div>
                     </div>
@@ -194,27 +198,33 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <i class="fa fa-check"></i> Free Hand
+                                        <i class="fa fa-check"></i>
+                                        Free Hand
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Gym Fitness
+                                        <i class="fa fa-check"></i>
+                                        Gym Fitness
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Running
+                                        <i class="fa fa-check"></i>
+                                        Running
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Yoga
+                                        <i class="fa fa-check"></i>
+                                        Yoga
                                     </li>
                                     <li>
-                                        <i class="fa fa-check"></i> Body Building
+                                        <i class="fa fa-check"></i>
+                                        Body Building
                                     </li>
                                     <li>
-                                        <i class="fa fa-times"></i> Exercise
+                                        <i class="fa fa-times"></i>
+                                        Exercise
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <a href="#" class="btn-gh">Sign up now</a>
+                                <a href="signup.html" class="btn-gh">Sign up now</a>
                             </div>
                         </div>
                     </div>
@@ -237,81 +247,78 @@
                                         <i class="fa fa-check"></i>Running
                                     </li>
                                     <li>
-                                        <i class="fa fa-times"></i> Yoga
+                                        <i class="fa fa-times"></i>
+                                        Yoga
                                     </li>
                                     <li>
-                                        <i class="fa fa-times"></i> Body Building
+                                        <i class="fa fa-times"></i>
+                                        Body Building
                                     </li>
                                     <li>
-                                        <i class="fa fa-times"></i> Exercise
+                                        <i class="fa fa-times"></i>
+                                        Exercise
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <a href="#" class="btn-gh">Sign up now</a>
+                                <a href="signup.html" class="btn-gh">Sign up now</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- BMI Section Begin -->
             <section class="bmi-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-4">
-                            <h1>Calculate Your Bmi</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <form>
-                                <div class="bmi-calculator-weight">
-                                    <input class="weight-slider" name="realweight" id="myWeight" type="range" min="25" max="180" value="60"/>
-                                    <p style="margin-top: 1.8em;">
-                                      WEIGHT: 
-                                      <input name="Teža" id="inputWeight" type="number" value="60" min="25" max="180" step="1" oninput="showValWeight(this.value)"/>
-                                      <span id="weight"></span> kg
-                                    </p>
-                                  </div>
-                                  <div class="bmi-calculator-height">
-                                    <input class="height-slider" name="realheight" id="myHeight" type="range" min="100" max="220" step="1" value="160">
-                                    <p style="margin-top: 1.8em;">
-                                      HEIGHT:
-                                      <input name="Višina" id="inputHeight" type="number" value="160" min="100" max="220" step="1" oninput="showValHeight(this.value)"/>
-                                      <span id="height"></span> cm
-                                    </p>
-                                  </div>
-                                  <input class="gumb" type="button" value="Calculate" onclick="calculateBmi()" style="margin-top: 0.5em">
-                                 <p style="margin-top: 1em;font-size: 1.2em;">
-                                   <strong>Your BMI:</strong>
-                                   <span id="yourbmi" style="font-size: 1.2em;margin-left: 8px;"></span>
-                                 </p>
-                                 <p></p>
-                                 <p>
-                                   <span id="evaluationMessage"></span>
-                                 </p>
+                        <div class="col-7">
+                            <h1>Calculate your BMI</h1>
+                            <p>Body mass index (BMI) is a measure of body fat based on height and weight
+                                that applies to adult men and women.</p>
+                            <form class="box">
+                                <div class="field">
+                                    <label for="" class="label">
+                                        Weight/kg:
+                                    </label>
+                                    <input id="weight" class="input" type="number">
                                 </div>
-                                </form>
+
+                                <div class="field">
+                                    <label class="label">
+                                        Height/cm:
+                                    </label>
+                                    <input id="height" class="input" type="number">
+                                </div>
+                                <input class="primary-btn" type="submit" value="calculate">
+                            </form>
+
+                            <div class="result">
+                                <h2 class="title"></h2>
+                            </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5">
                             <table id="customers">
                                 <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
+                                    <th>BMI</th>
+                                    <th>Weight Status</th>
                                 </tr>
                                 <tr>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
+                                    <td>Below 18.5</td>
+                                    <td>Underweight</td>
                                 </tr>
-                                  <tr>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Maria Anders</td>
-                                    <td>Germany</td>
-                                  </tr>
+                                <tr>
+                                    <td>18.5-24.9</td>
+                                    <td>Normal</td>
+                                </tr>
+                                <tr>
+                                    <td>25-29.9</td>
+                                    <td>Overweight</td>
+                                </tr>
+                                <tr>
+                                    <td>Above 30</td>
+                                    <td>Obese</td>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -517,6 +524,36 @@
                 </div>
             </section>
 
+            <!-- Blog Section Begin -->
+            <section class="blog-section">
+                <div class="container">
+                    <div class="blog-heading">
+                        <h1>Latest Blog Post</h1>
+                        <p>Latest news</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="images/blog-1.jpg">
+                            <h1>Lorem ipsum dolor</h1>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiumo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="col-4">
+                            <img src="images/blog-2.jpg">
+                            <h1>Lorem ipsum dolor</h1>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiumo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            <input type="button" value="Read more">
+                        </div>
+                        <div class="col-4">
+                            <img src="images/blog-3.jpg">
+                            <h1>Lorem ipsum dolor</h1>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiumo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            <input type="button" value="Read more">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Footer Section Begin -->
             <footer class="footer-section">
                 <div class="container">
@@ -586,6 +623,7 @@
             </footer>
 
             <!-- Js Plugins -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <script src="js/jquery-3.3.1.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/jquery.magnific-popup.min.js"></script>

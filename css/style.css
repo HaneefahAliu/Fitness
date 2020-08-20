@@ -789,27 +789,237 @@ cite img {
     text-decoration: none;
 }
 
-/* table */
+/*---------------------------
+  BMI Section
+----------------------------*/
+.bmi-section {
+    margin-top: 100px;
+    height: 100%;
+}
+
 #customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
   }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
+
   #customers th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
+    text-align: left;   
+     background: #FDC830;
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+    background: linear-gradient(to right, #F37335, #FDC830);
     color: white;
   }
 
+  #customers {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+.result{
+    margin:40px 0;
+}
+
+.result .title{
+    text-align:center;
+    font-size: 20px;
+}
+
 /*---------------------------
-  Account Section
+  Blog Section
 ----------------------------*/
-.account-section {
+.blog-section {
     margin: 30px;
+}
+
+.blog-section h1 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.blog-section input[type=button] {
+    background-color: white; 
+    color: #f67831;
+    border: none;
+}
+
+.blog-section input[type=button]:hover {
+    background-color: white; 
+    color: black;
+    border: none;
+}
+
+.blog-heading {
+    text-align: center;
+}
+
+.blog-heading h1 {
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+.blog-heading p {
+    font-size: 30px;
+}
+
+/*---------------------
+  About Section
+-----------------------*/
+.about-section {
+    margin: 30px;
+}
+
+.about-section img {
+    width: 120%;
+}
+.about-section hr {
+    color: #f67831;
+    border-bottom: 3px solid #f67831;
+    width: 30%;
+}  
+
+.about-section ul {
+    list-style: none;
+}
+
+.about-section ul li {
+    padding: 5px 0;
+    font-size: 25px;
+}
+
+.about-section .fa {
+    color: #f67831;
+    font-size: 25px;
+}
+
+.about-section ul li p {
+    font-size: 15px !important; 
+}
+
+/*---------------------
+  Trainer Section
+-----------------------*/
+
+.trainer-section {
+	background: #f5f5f5;
+	padding-top: 90px;
+	padding-bottom: 190px;
+}
+.trainer-section.about-trainer {
+	background: #ffffff;
+}
+.single-trainer-item {
+	position: relative;
+}
+.single-trainer-item:hover .trainer-text {
+	height: 250px;
+	bottom: -90px;
+	padding: 26px 30px 30px;
+	-webkit-box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 10px 49px 0px rgba(0, 0, 0, 0.15);
+}
+.single-trainer-item:hover .trainer-text p {
+	opacity: 1;
+}
+.single-trainer-item:hover .trainer-text .trainer-social {
+	opacity: 1;
+	visibility: visible;
+}
+.single-trainer-item img {
+	min-width: 100%;
+}
+.single-trainer-item .trainer-text {
+	position: absolute;
+	left: 50%;
+	bottom: -55px;
+	text-align: center;
+	background: #ffffff;
+	width: 310px;
+	margin: 0 auto;
+	-webkit-transform: translateX(-155px);
+	-ms-transform: translateX(-155px);
+	transform: translateX(-155px);
+	-webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+	padding: 20px 30px 18px;
+	height: 90px;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	overflow: hidden;
+}
+.single-trainer-item .trainer-text h5 {
+	font-size: 20px;
+	color: #111111;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+.single-trainer-item .trainer-text span {
+	font-size: 16px;
+	color: #f15d44;
+}
+.single-trainer-item .trainer-text p {
+	margin-top: 7px;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.single-trainer-item .trainer-text .trainer-social {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.single-trainer-item .trainer-text .trainer-social a {
+	display: inline-block;
+	font-size: 17px;
+	color: #111111;
+	margin-right: 25px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.single-trainer-item .trainer-text .trainer-social a:hover {
+	color: #f15d44;
+}
+.single-trainer-item .trainer-text .trainer-social a:last-child {
+	margin-right: 0;
+}
+
+/*---------------------
+  Gallery Section
+-----------------------*/
+
+.gallery-section {
+	padding-bottom: 70px;
+}
+.gallery-section h1 {
+	font-size: 30px;
+}
+.gallery-controls {
+	text-align: center;
+	margin-bottom: 55px;
+}
+.gallery-controls li {
+	list-style: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 600;
+	color: #111111;
+	text-transform: uppercase;
+	margin-right: 30px;
+	cursor: pointer;
+}
+.gallery-controls li.active {
+	color: #f15d44;
+}
+.gallery-controls li:last-child {
+	margin-right: 0;
+}
+.gallery-filter img {
+	min-width: 100%;
+	margin-bottom: 30px;
 }
